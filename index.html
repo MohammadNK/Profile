@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fa-ir">
+	<head>
+		<meta charset="UTF-8"/>
+			<style>
+				html
+				{
+					/*background-image : url('Background.jpg');
+					background-size : cover;*/
+					direction : rtl;
+					font-size : 25pt;
+				}
+				
+				.menu
+				{
+					background-color : #2D35FF;
+					position : fixed;
+					width : 100%;
+					margin-top : -10px;
+					margin-right : -8px;
+					padding :10px 0px 0px 0px;
+					box-shadow : 0px 0px 20px 3px rgba(0, 0, 0, 0.5);
+					box-sizing : border-box;
+				}
+				
+				ul
+				{
+					list-style-type : none;
+					margin : 0px;
+					padding : 0px;
+				}
+				
+				#LM
+				{
+					float : left;
+					background-color : white;
+					border-radius : 50px;
+					margin : 0px 0px 10px 10px;
+					padding : 0px;
+					font-size : 20pt;
+					text-align : center;
+					box-shadow : 3px 3px 10px 1px rgba(0, 0, 0, 0.5);
+				}
+			
+				#LM > a li
+				{
+					padding : 0;
+					width : 110px;
+					height : 40px;
+					padding-top : 5px;
+					box-sizing : border-box;
+					color : black
+				}
+				
+				#LM li:hover
+				{
+					background-color : #AAD8FC;
+					border-radius : 50px;
+				}
+				
+				#RM li
+				{
+					height : 60px;
+					margin-top : -8px;
+					padding-top : 8px;
+					box-sizing : border-box;
+				}
+				
+				li
+				{
+					float : right;
+					width : auto;
+					padding : 0px 40px;
+				}
+				
+				a li
+				{
+					text-decoration : none;
+					color : white;
+				}
+				
+				#RM  li:hover
+				{
+					background-color : #3590F3;
+				}
+		
+				}
+				
+				#Form
+				{
+					background-color : blue;
+					position : absolute;
+					margin : 2em auto;
+				}
+			</style>
+	</head>
+	<body>
+		<div class="menu">
+			<ul id="RM">
+				<a href="#"><li>صفحه اصلی</li></a>
+				<a href="#"><li>فهرست</li></a>
+				<a href="#"><li>اخبار</li></a>
+				<a href="#"><li>درباره ما</li></a>
+			</ul>
+			<ul id="LM" >
+				<a href="#"><li>ورود</li></a>
+				<a href="#"><li>ثبت نام</li></a>
+			</ul>
+		</div>
+		<div id="Form">
+			<form action="Server.php" method="get">
+				<input type="text" id="Username" name="Username"/> 
+				<input type="password" id="Pass" name="Pass"/>
+				<input type="checkbox"/>
+			</form>
+		</div>
+	</body>
+</html>
