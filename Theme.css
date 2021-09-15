@@ -1,0 +1,423 @@
+@font-face 
+{
+	font-family: "Gandom";
+	src: url("Gandom.eot");
+	src: url("Gandom.woff") format("woff"),
+	url("Gandom.otf") format("opentype"),
+	url("Gandom.svg") format("svg");
+}
+
+	html
+	{
+		direction : rtl;
+		font-size : 20pt;
+		height : 100%;
+		font-family:Gandom
+	}
+	
+	body
+	{
+		height : 100%
+	}
+	
+	.menu
+	{
+		background-color : #2D35FF;
+		position : fixed;
+		width : 100%;
+		margin-top : -10px;
+		margin-right : -8px;
+		padding :5px 0px 0px 0px;
+		box-shadow : 0px 0px 20px 3px rgba(0, 0, 0, 0.5);
+		box-sizing : border-box;
+		z-index: 1;
+		white-space: nowrap;
+		overflow: hidden;
+		display:flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start
+	}
+	
+	ul
+	{
+		list-style-type : none;
+		margin : 0px;
+		padding : 0px;
+	}
+	
+	#LeftM
+	{
+		float: left;
+		padding: 0;margin: 0;
+		display: flex;
+		flex-direction: row;
+		align-items: center;height: 60px;
+	}
+	
+	#LeftM li
+	{
+		padding: 0px ;margin: 0px;
+	}
+	
+	#LM
+	{
+		float: left;
+		background-color : white;
+		border-radius : 50px;
+		margin : 0px 10px;
+		padding : 0px;
+		font-size : 15pt;
+		text-align : center;
+		box-shadow : 3px 3px 10px 1px rgba(0, 0, 0, 0.5);
+		display: flex;
+		flex-wrap: nowrap
+	}
+	
+	#LM > a li
+	{
+		padding-top : 0;
+		width : 90px;
+		box-sizing : border-box;
+		color : black;
+		height: 40px;
+	}
+	
+	#LM li:hover
+	{
+		background-color : #AAD8FC;
+		border-radius : 50px;
+	}
+	
+	#darkmode
+	{
+		width: 40px;
+		height: 40px;
+		border-radius: 100%;
+		padding: 0;margin: 0;
+		background-color: white;
+		appearance: icon;
+		cursor: pointer;
+		
+	}
+	
+	#RM
+	{
+		float:right;display:flex
+	}
+	
+	#RM li
+	{
+		height : 70px;
+		margin-top : -8px;
+		padding-top : 8px;
+		box-sizing : border-box;
+	}
+	
+	li
+	{
+		float : right;
+		width : auto;
+		padding : 0px 40px;
+	}
+	
+	a li
+	{
+		text-decoration : none;
+		color : white;
+	}
+	
+	#RM  li:hover
+	{
+		background-color : #3590F3;
+	}
+	
+	h2
+	{
+		color:white;
+		white-space: nowrap;
+	}
+	
+	#form-container
+	{
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		padding: 120px 0 90px 0 ;
+	}
+		
+	#form
+	{
+		width: auto;
+		background-color : lightblue;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0; margin: 80px;
+		border-radius: 20px
+	}
+	
+	#input
+	{
+		background-color: lightblue;
+	}
+	
+	input 
+	{
+		height: 40px;
+		width: 270px;
+		display: block;
+		margin: 30px ;padding: 0;
+		border-radius: 5px;
+		border: none;
+		text-align: center;
+		font-size: 18pt;
+	}
+	
+	input:disabled
+	{background-color: #9bc6d4}
+	
+	button
+	{
+		height: 40px;
+		width: 200px;
+		display: block;
+		margin: 10px 30px 20px 30px;
+		border-radius: 5px;
+		border: none;
+		text-align: center;
+		font-size: 20pt;
+	}
+	
+	#check
+	{
+		width: 20px;
+		height: 20px;
+		margin: 5px;padding: 0;
+		display: inline
+	}
+	
+	#Gender input
+	{
+		padding: 0;margin: 10px;
+		display: inline;
+		width: 20px;
+		height: 20px;
+	}
+	
+	#span
+	{
+		font-size: 14pt;
+		display: relative;
+	}
+	
+	
+	#checkInput 
+	{
+		display: none;
+	}
+	
+	#Label_night 
+	{
+		width: 65px;
+		height: 35px;
+		background: #1E1E1E;
+		border-radius: 60px;
+		display: block;
+		margin: 0px ;
+		position: relative;
+		transition: all .4s;
+		cursor: pointer;
+	}
+	
+	#Label_night::after 
+	{
+		content: "";
+		width: 26px;
+		height: 26px;
+		border-radius: 100%;
+		margin: 5px;
+		display: block;
+		background: ghostwhite;
+		position: absolute;
+		transition: all .4s;
+	}
+	
+	#checkInput:checked + #Label_night
+	{
+		background-color: ghostwhite;
+		transition: all .4s;
+	}
+	
+	#checkInput:checked + #Label_night::after 
+	{
+		position: absolute;
+		background-color: #1E1E1E;
+		transition: all .4s;
+		transform: translate(-30px,0px);
+	}
+	
+	#sun
+	{
+		background:url('Icons3.png')-151px -17px;
+		width:40px;
+		height:40px;
+		margin:0px 5px
+	}
+	
+	#moon
+	{
+		background:url('Icons3.png') -110px -17px;
+		width:40px;
+		height:40px;
+		margin:0px 5px;
+	}
+	
+	#by_se{transition:all .20s}
+	
+	input:hover , button:hover
+	{
+		background-color: #d4eaf9;
+	}
+	
+	input:focus
+	{
+		background-color: ghostwhite;
+		border: none;
+		outline: none;
+		box-sizing : border-box;
+		transform: scale(1.1);
+		transition: 0.5s;
+		z-index: 2;
+	}
+	
+	#ProfileInfo input
+	{
+		display: inline;
+		margin: 10px
+	}
+	
+	#ProfileInfo
+	{
+		margin: 0;padding: 0;
+		display: block;
+		width: 100%;
+		height: 300px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+	}
+	
+	#Profile
+	{
+		width: 250px;
+		height: 250px;
+		background-color: navy;
+		border-radius: 100%;
+		float:right;
+		margin: 10px;padding: 0px;
+		display:flex;
+		align-items:flex-end;
+		justify-content:space-between;
+		background-image:url(Profile.png);
+		background-size: cover;
+		border: navy 2px solid
+	}
+	
+	#AddProfile
+	{
+		background:url('Icons3.png') 3px 3px;
+		background-size: cover;
+		width:45px;
+		height:45px;
+		border-radius:100%;
+		background-color:ghostwhite;
+	}
+	
+	#Info
+	{
+		float: left;
+		width: auto;
+		display: inline;
+		margin: 10px;padding: 0;
+		white-space: nowrap;
+	}
+	
+	#PersonalInfo
+	{
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		font-size: 15pt;
+		white-space: nowrap
+	}
+	
+	#PI1 ,#PI2
+	{margin: 10px}
+	
+	#IndexInfo
+	{
+		display:flex;
+		align-items:flex-start;
+		flex-direction:column;
+		margin:20px
+	}
+	
+	#Eye
+	{
+		display:none !important;
+	}
+	
+	#Eye:checked+#Show
+	{
+		background-color: #587086;
+	}
+	
+	
+	#Show
+	{
+		width:50px;
+		height:40px;
+		border-radius:100%;
+		content: "";
+		display: block;
+		background: url('Icons3.png') -63px -18px , ghostwhite;
+		transition: all .2s;
+	}
+	
+	#Downer
+	{
+		width: webkit-fill-available;
+		height:content-height;
+		border-radius:100% 100% 0 0;
+		background-color:blue;
+		margin: -8px; padding: 0px;
+		position: relative;
+		font-size: 14pt;
+		text-align: center;
+		color: ghostwhite
+	}
+	
+	#Downer ul
+	{
+		padding-top:10px;
+		margin-bottom: 10px;
+	}
+	
+	#Downer ul li
+	{
+		height: auto;
+		float: none;
+		display: inline;
+		margin: 0px; padding: 0px 20px;
+		border-left: 1px solid white
+	}
+	
+	#Downer a
+	{text-decoration: none;margin:0;padding:0}
+	
+	
+	

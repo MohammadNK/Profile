@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa-ir">
+	<head>
+		<meta charset="UTF-8"/>
+		<link type="text/css" rel="stylesheet" href="Theme.css"/>
+		<style>
+			input
+			{
+				margin: 15px;
+				display: inline;
+				width: 250px;
+			}
+		</style>
+	</head>
+	<body id="body">
+		<div class="menu">
+			<ul id="RM">
+				<a href="#"><li>صفحه اصلی</li></a>
+				<a href="#"><li>فهرست</li></a>
+				<a href="#"><li>اخبار</li></a>
+				<a href="#"><li>درباره ما</li></a>
+			</ul>
+			
+			<ul id="LeftM">
+			<li>
+			<div style="display:flex">
+				<div id="sun"></div>
+				<input type="checkbox" id="checkInput" onclick="Nightmode()">
+				<label for="checkInput" id="Label_night"></label>
+				<div id="moon" ></div>
+			</div>
+			</li>
+			<li>
+				<ul  >
+				<a href="Profile.html"><li><div id="Profile" style="width:50px;height:50px;padding:0;margin: 0px 4px 5px 5px;"></div></li></a>
+				</ul>
+			</li>
+			</ul>
+		</div>
+		
+		<div align="center" id="form-container" style="padding: 50px 0 30px 0 ;">
+				<div id="form" style="height: auto; width: auto">
+					<form>
+						<h2>حساب کاربری</h2>
+						<div id="ProfileInfo">
+							<div id="Profile" ><a href="#"><div id="AddProfile" style="" title="افزودن تصویر"></div></a></div>
+						<div id="Info" align="right">
+						نام کاربری:<input type="text" name="Username" value="Mohammad.N.K" dir="ltr" disabled /><br/>
+						<div style="display: flex;align-items: center;">
+						رمز عبور :<input type="password" id="Pass" name="Password" style="margin-right:24px" Value="134295!M" dir="ltr" disabled />
+						<input type="checkbox" id="Eye" onclick="Show()">
+						<label for="Eye" id="Show"></label>
+						</div>
+						</div>
+						</div>
+						<div id="PersonalInfo" align="left">
+						<div id="PI1">	
+						نام	<input type="text" name="Firstname" id="Input" Value="محمد" disabled /><br/>
+						نام خانوادگی	<input type="text" name="Lastname" id="Input" value="نظری" disabled /><br/>
+						</div>	
+						<div id="PI2">
+						شماره تلفن	<input type="text" name="PhoneNumber" id="Input" value="09*********" disabled /><br/>
+						ایمیل	<input type="text" name="Email" id="Input" value="Examle@gmail.com" dir="ltr" disabled /><br/>
+						</div>
+						</div>
+					</form>
+				</div>	
+		</div>
+		<div id="Downer">
+		<ul>
+				<a href="#"><li>اطلاعات</li><a>
+				<a href="#"><li>تماس با ما</li><a>
+				<a href="#"><li style="border:none">قوانین ومقررات</li><a>
+		</ul>
+			نشانی : ...<br/>
+			نشانی پستی : ...</br>
+		</div>
+	</body>
+	<script>
+		var by_se = document.getElementById('body');
+		function Nightmode() {
+			var checkbox = document.getElementById('checkInput');
+			if (checkbox.checked == true)
+			{
+				by_se.style.background = "#1E1E1E";
+			}
+			
+			else 
+			{
+				by_se.style.background = "#fff";
+			}
+		}
+		
+		var P = document.getElementById('Pass');
+		function Show() 
+		{
+			var checkShow = document.getElementById('Eye')
+			if (checkShow.checked ==true)
+			{
+				P.type = "text";
+			}
+			
+			else 
+			{
+				P.type = "password";
+			}
+		}
+	</script>
+</html>
